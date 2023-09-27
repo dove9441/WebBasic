@@ -1,0 +1,28 @@
+.title {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.startbutton{
+	width:500px;
+	height:500px;
+	background-color: #ebf7bc;
+	margin:100px auto;
+	border: 1px black dotted;
+}
+
+.screen{
+	width: 1280px;
+	height: 720px;
+	background-color:#d3f0e3;
+	border:1px black solid;
+	margin: 50px auto;
+}
+
+.center{
+	text-align: center;
+	
+}
+
+
+

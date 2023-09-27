@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>149p input 태그,form에서의 추가 속성 연습</title>
+	</head>
+	<body>
+		<form method="post">
+			<fieldset>
+				<legend>배송 정보</legend>
+				<label for="user-name">이름 </label>
+				<input type="text" id="user-name" placeholder="이름을 입력하세요" required autofocus><br><!-- autofocus 속성은 자동으로 커서가 최초에 입력 커서가 위치하게 되고, placeholder 속성은 박스 안에 표시되는 힌트이다-->
+				<label for="address">배송 주소 </label>											<!-- required 속성은 작성하지 않으면 오류가 난다-->
+				<input type="text" id="address" placeholder="주소를 입력하세요" required><br>
+				<label for="email">이메일 </iabel>
+				<input type="email" id="user-id" placeholder="example@example.com" required><br>
+				<label for="phone">연락처 </label>
+				<input type="text" placeholder="하이픈(-) 은 제외해 주세요" id="phone" required><br>
+				<label for="date">배송 날짜 </label>
+				<input type="date" id="date required"><small>(주문일로부터 최소 3일 이후)</small><br>
+				<label for="quentity">수량 </label>
+				<input type="number" id="quentity" value="1" readonly><br><br>	 <!-- 또한 readonly 속성을 사용하면 읽기 전용이 된다(위의 예시는 max 속성으로도 제한을 걸 수 있다)-->
+				<label for="memo">메모 </label>
+				<textarea id="memo" cols="40" rows="5"></textarea><br><!--textarea 태그(input에 속성이 아니다!!)는 text를 여러 줄 입력할 수 있는 영역을 생성. 영문자 기준이므로 너비 40은 한글 20자이다.-->
+				<button type="submit">주문하기</button> <!-- 버튼 태그는 닫는 태그가 필요하다 버튼은 input submit,reset이 가능하고, 기능도 동일하지만 css에서의 디자인이 가능하다-->
+			</fieldset>
+			<br><br><br>
+			<fieldset>
+				<legend>드롭다운 목록 select,option/데이터 목록 datalist, option 태그 연습</legend>
+				<label for="prod1">상품 선택(가정용)</label>
+				<select id="prod1" size="2"> <!-- 기본적으로 표시할 항목 개수를 입력. 기본값은 1-->
+					<option value="서버에 넘겨주는 값1" selected>가정용 5kg</option> <!-- selected는 기본 선택-->
+					<option value="서버에 넘겨주는 값2">가정용 3kg</option>
+				</select>
+				<br>
+				<label for="wrap">포장 여부(데이터리스트는 select와 비슷해 보이지만 텍스트 필드에 타이핑을 하면 자동완성 기능을 제공한다.</label>
+				<input id="wrap" type="text" list="pack"> <!-- input 태그의 id와 데이터리스트 id 일치, input text 한 그 안에 데이터리스트가 표시되는 것이다--> 
+				<datalist id="pack">
+					<option value="package">선물 포장</option>
+					<option value="no_package">포장 안 함</option>	<!-- value의 값은 서버로 넘겨지는 값이지만 텍스트 필드에도 표시된다.-->
+				</datalist>
+			</fieldset>
+			
+			
+			
+		</form>
+		
+		
+		
+	</body>
+
+	
+	
+	
+	
+	
+</html>

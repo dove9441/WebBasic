@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>폼 연습 2(139p)</title>
+	</head>
+	<body>
+		<form method="post">
+		<fieldset>
+		<h3>상품 선택</h3>
+		<ul>
+			<li>
+			<label><input type="checkbox" value="g_3">선물용 3kg</label>
+			<input type="number" min="0" max="5" value="0">개 (최대 5개) <!--number, range에서 value는 초기값을 의미한다.-->
+			</li>
+			<li>
+			<label><input type="checkbox" value="g_5">선물용 5kg</label>
+			<input type="number" min="0" max="5">개 (최대 5개)
+			</li>
+		</ul>
+			</fieldset>
+		</form>
+	
+		<p>슬라이드 막대 이용하기</p>
+		<form>
+			<fieldset>
+		<ul>
+			<li>
+			<label><input type="checkbox" value="h_3">가정용 3kg</label>
+			<input type="range" min="1" max="5" value="2">개 (최대 5개)
+			</li>
+			<li>
+			<label><input type="checkbox" value="h_5">가정용 5kg</label>
+			<input type="range" min="0" max="3" value="3">개 (최대 3개)
+			</li>
+			<p>배송 날짜 입력하기(날짜 형식 지정 여기서도 범위 지정이 가능하다)</p>
+			<input type="date" min="2022-01-01" max="2022-08-15">
+			<input type="month">
+			<input type="week">
+		</ul>
+			</fieldset>
+		</form>
+		<input type="submit" value="제출하기"><br>
+		<input type="reset" value="주문 취소">
+		<h1>
+			이미지 버튼 추가
+		</h1>
+	<form method="post">
+	<fieldset>
+		<label>아이디 :<input type="text" id="user-id" size="10" value="아이디를 입력하세요"></label>
+		<label>비밀번호 :<input type="password" id="user-pw" size="10"></label>
+		<input type="image" alt="로그인" src="../example/05/images/login.png" width="50" height="50">
+		</fieldset>
+	</form>
+	<h1>버튼으로 자바스크립트 실행</h1>
+		<form>
+			<input type="button" value="공지 창 열기" onclick="window.open('../example/05/notice.html')"> <!--버튼은 onclick으로 실행 내용 작성-->
+		</form>
+	<h1>파일 첨부</h1>
+		<form method="post">
+			<input type="file">
+		</form>
+	<h1>히든 속성</h1>
+	<form action="/examples/media/action_target.php" method="get"> <!-- action은 예시이다, name은 서버로 전송되는 이름이다-->
+    아이디 : <input type="text" name="user_id"><br>
+    비밀번호 : <input type="password" name="user_pw"><br>
+    <input type="hidden" id="gameToken" name="game_token" value="xm234jq"> <!-- 이 값이 보이지는 않지만 같이 전송되는 것이다-->
+    <input type="submit" value="로그인">
+</form>
+		
+		
+		
+		
+	</body>
+	
+	
+	
+	
+	
+	
+	
+</html>

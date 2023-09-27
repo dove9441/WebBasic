@@ -1,0 +1,20 @@
+.title {
+	font-weight: bold;
+	font-size: 50px;
+}
+
+div{
+	border:1px black solid;
+}
+
+th, td, tr{
+	border:1px black solid;
+	width:150px;
+	height:40px;
+	text-align:center;
+}
+
+table{
+	margin:20px 20px;
+	border-collapse:collapse;
+}

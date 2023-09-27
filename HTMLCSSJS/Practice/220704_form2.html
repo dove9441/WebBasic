@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<label>이메일: <input type="email" id="user_email" size="10"></label> <!-- html5에서 이렇게 하면 이메일 형식이 아닐 경우 자동으로 오류를 표시해 준다-->
+				<label>아이디: <input type="text" id="user_id" size="10"></label>
+				<label>비밀번호: <input type="password" id="user_pw" size="10"></label>
+				<input type="submit" value="로그인"> <!-- 로그인 버튼 형식을 기억해 두자-->
+			</fieldset>
+			<fieldset>
+				<legend>상품 선택</legend>
+				<p>주문할 상품을 선택해 주세요</p>
+				<label><input type="checkbox" value="g3">선물용 3kg</label>
+				<label><input type="checkbox" value="g5">선물용 5kg</label>
+				<label><input type="checkbox" value="g10">선물용 10kg</label> <!-- checkbox는 여러 개 선택, radio는 하나만 선택 서버 프로그램 제어 시 radio의 name값은 동일하게-->
+				<p>포장 선택</p>
+				<label><input type="radio" name="wrap" value="yes">선물 포장 O</label>
+				<label><input type="radio" name="wrap" value="no">선물 포장 X</label>
+			</fieldset>
+		</form>
+		
+	</body>
+	
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>header와 main, footer</title>
+	</head>
+	<div id="container">  <!-- div: division-->
+		<header>
+			<div id="logo">
+			<a href="#"><h1>Dream Jeju</h1></a>  
+			</div> <!-- 로고 영역, div를 사용해서 묶는다.why? 스타일 설정을 위해서-->
+		<nav>
+			<!--내비게이션 영역(다른 위치로 연결하거나 다른 웹 문서로 연결, header 안에 있는 것임)-->
+			<ul id="topMenu">						<!-- ul: Unordered List, li: List Item (목록 안에서 각 항목)-->
+				<li><a href="#">단체 여행</a></li>   <!-- <a herf="#"은 "a"라는 태그에 herf 속성을 주는 것. 이동을 위해 쓰이지만 의미없는 값 #을 넣었다-->
+				<li><a href="#">맞춤 여행</a></li>
+				<li><a href="#">갤러리</a></li>
+				<li><a href="#">문의하기</a></li>
+
+			</ul>
+		</nav>
+		</header>
+		
+		<main class="contents">
+		<section id="headling">
+			<h2>
+				몸과 마음이 치유되는 섬
+			</h2>
+			</section>
+			<section id="activity">
+			<h2>
+				다양한 액티비티가 기다리는 섬
+				</h2>
+			</section>
+		</main>
+			<footer>
+			<section id="bottomMenu">
+				<ul>
+					<li><a href="#">회사 소개</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">여행 약관</a></li>
+					<li><a href="#">사이트맵</a></li>
+
+				</ul>
+			</section>
+			</footer>
+	</div>
+</html>

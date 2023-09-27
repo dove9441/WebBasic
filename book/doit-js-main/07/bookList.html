@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book List</title>
+  <link rel="stylesheet" href="css/bookList.css">
+</head>
+<body>
+	<div id="container">
+		<h1>Book list</h1>
+<fieldset>
+	<form>
+			<ul id="bookInfo">
+				<li>
+					<label for="title">제목</label>
+					<input type="text" id="title">
+				</li>
+				<li>
+					<label for="author">저자</label>
+					<input type="text" id="author">	
+				</li>
+			</ul>
+			
+			<button type="reset">취소하기</button>
+			<button id="save">저장하기</button>
+		</form>
+</fieldset>
+	<ul id="booklist">
+		
+	</ul>
+		
+
+		
+		
+		
+</div>
+	
+
+<script>
+	const title = document.getElementById('title');
+	const booklist = document.getElementById('booklist');
+	const author = document.getElementById("author");
+	const savebtn = document.getElementById("save");
+	savebtn.addEventListener('click', (e)=>{
+		e.preventDefault();
+		booklist.insertAdjacentHTML("beforeend",`
+		<li>${title.value} - ${author.value}
+		<span class="delbtn">삭제</span>
+		</li>
+		<hr>
+		`);
+		
+		
+		const delbtns = document.getElementsByClassName("delbtn");
+		for (let i of delbtns){
+			i.addEventListener("click", function(){
+			this.parentNode.remove();
+		});
+	}
+	});
+	
+	
+	
+	
+</script>
+</body>
+</html>
